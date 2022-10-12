@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Web Page</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    td:not(:first-child) {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jelly of the Month Club</h1>
+  <h2>Make all of your friends jelly of your stock of jelly</h2>
+  <p>Here at JOTMC Inc., we are constantly striving to supply our customers with the highest-quality and most unique jellies
+  on a monthly basis. For the jelly lover in your
+  life (or yourself!), this is the gift that keeps on giving all year round. We offer three tiers of monthly jelly joy,
+  and each one offers their own perks. Here is a breakdown
+  of each, as well as your monthly price:</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Basic Plan</th>
+        <th>Deluxe Plan</th>
+        <th>Jelly Giant Plan</th>
+      </tr>
+      <tr>
+        <td>Three new curated jellies per month</td>
+        <td>&check;</td>
+        <td>&check;</td>
+        <td>&check;</td>
+      </tr>
+      <tr>
+        <td>Monthly jellies come with commemorative mason jars</td>
+        <td></td>
+        <td>&check;</td>
+        <td>&check;</td>
+      </tr>
+      <tr>
+        <td>Free bonus jar of preserves bi-monthly</td>
+        <td></td>
+        <td>&check;</td>
+        <td>&check;</td>
+      </tr>
+      <tr>
+        <td>Free yearly tickets to Jelly Con</td>
+        <td></td>
+        <td></td>
+        <td>&check;</td>
+      </tr>
+      <tr>
+        <td>Monthly Pricing</td>
+        <td>$30</td>
+        <td>$50</td>
+        <td>$60</td>
+      </tr>
+    </thead>
+  </table>
+  <p>Like what you see? Become a part of the JOTMC family today!</p>
+  <form>
+    <label>
+      <input placeholder="Your name">
+    </label>
+    <label>
+      <select name="select">
+        <option value="select">Select Your Plan:</option>
+      </select>
+    </label>
+    <button>Submit</button>
+  </form>
+</body>
+</html>
