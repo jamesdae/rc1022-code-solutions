@@ -1,0 +1,29 @@
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-one-fourth {
+  flex-basis: calc(100% / 4);
+}
+
+.column-two-thirds {
+  flex-basis: calc(200% / 3);
+}
+
+.column-full {
+  flex-basis: 100%;
+}
