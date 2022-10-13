@@ -21,5 +21,9 @@ img {
 }
 
 .column-two-thirds {
-  flex-basis: 66.66%;
+  flex-basis: calc(200% / 3);
+}
+
+.column-full {
+  flex-basis: 100%;
 }
