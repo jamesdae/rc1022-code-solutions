@@ -24,7 +24,7 @@ html {
   flex-basis: 100%;
 }
 
-.column-third {
+.column-fourth {
   flex-basis: calc(100% / 4);
 }
 
@@ -48,11 +48,11 @@ div.image {
   border-radius: 50%;
 }
 
-.column-third > h3 {
+.column-fourth > h3 {
   font-size: 111%;
 }
 
-.column-third > p {
+.column-fourth > p {
   font-size: 77%;
   color: #ddd;
   line-height: 18px;
