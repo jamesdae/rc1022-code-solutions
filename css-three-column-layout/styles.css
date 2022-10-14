@@ -24,8 +24,9 @@ html {
   flex-basis: 100%;
 }
 
-.column-fourth {
-  flex-basis: calc(100% / 4);
+.column-third {
+  flex-basis: calc(100% / 3);
+  max-width: 225px;
 }
 
 .circle {
@@ -48,11 +49,11 @@ div.image {
   border-radius: 50%;
 }
 
-.column-fourth > h3 {
+.column-third > h3 {
   font-size: 111%;
 }
 
-.column-fourth > p {
+.column-third > p {
   font-size: 77%;
   color: #ddd;
   line-height: 18px;
