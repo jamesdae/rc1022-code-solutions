@@ -94,10 +94,9 @@ div#links {
   background-color: #525351;
   color: white;
   height: 24em;
-  line-height: 1.2em;
   align-content: center;
   font-size: smaller;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .container > h1 {
@@ -207,4 +206,9 @@ button {
   background-color: #2a4464;
   color: white;
   align-self: center;
+}
+
+.half {
+  display: flex;
+  flex-basis: calc(100% / 2);
 }
