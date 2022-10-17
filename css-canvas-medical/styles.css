@@ -1,0 +1,203 @@
+p {
+  font-family: Avenir, sans-serif;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columnhalf {
+  flex-basis: calc(100% / 2);
+}
+
+.menu {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  font-family: Avenir, sans-serif;
+  color: #a0a0a0;
+  align-items: center;
+}
+
+.cheading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 28%;
+}
+
+#offices {
+  color: #6e6e6e;
+  background-color: #fafafa;
+  height: 30em;
+  font-size: smaller;
+  line-height: 2em;
+}
+
+#locations {
+  width: 100%;
+  text-align: center;
+}
+
+#gsb {
+  display: flex;
+  align-items: center;
+}
+
+#forgsb {
+  text-align: center;
+}
+
+#header {
+  justify-content: space-between;
+  height: 3em;
+  margin: 2em 2em 0;
+}
+
+#mainimage {
+  background-image: url("images/hero.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 30em;
+  color: white;
+  display: flex;
+  font-size: smaller;
+  font-weight: lighter;
+}
+
+#ready {
+  display: flex;
+  height: 12em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ready {
+  font-size: smaller;
+  margin-left: 4em;
+  color: #6e6e6e;
+  font-family: "Tiempos Headline", sans-serif;
+  font-weight: 300;
+}
+
+div#links {
+  background-color: #525351;
+  color: white;
+  height: 24em;
+  line-height: 1.2em;
+  align-content: center;
+  font-size: smaller;
+}
+
+.container > h1 {
+  font-family: "Tiempos Headline", sans-serif;
+}
+
+.cheading > p {
+  margin-top: 0;
+}
+
+.cheading > h1 {
+  font-weight: 500;
+}
+
+#primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-left: 4em;
+}
+
+#primary > h1 {
+  width: 78%;
+  margin: 0;
+  font-weight: normal;
+}
+
+#primary > p {
+  width: 77%;
+  font-size: smaller;
+  line-height: 2em;
+}
+
+.overlay {
+  background: radial-gradient(transparent, rgb(0 0 0  / 50%));
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.box {
+  max-width: 68%;
+  line-height: 1.8em;
+  margin-left: 4em;
+}
+
+img {
+  width: 70%;
+}
+
+.columnfourth {
+  flex-basis: calc(100% / 4);
+}
+
+.title {
+  width: 12em;
+  align-self: center;
+}
+
+hr {
+  width: 100%;
+  height: 2px;
+  background-color: #f0f1f3;
+  border: none;
+}
+
+button {
+  border-radius: 3px;
+  width: 11em;
+  height: 3em;
+  background-color: #2a4464;
+  color: white;
+}
+
+#privacy {
+  height: 10em;
+  align-items: center;
+  background-color: #fafafa;
+  color: #6e6e6e;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.end {
+  display: flex;
+  margin: 0 5%;
+  gap: 2em;
+}
+
+#emr {
+  padding: 2em;
+}
+
+#contact {
+  border-radius: 3px;
+  width: 8em;
+  height: 3em;
+  background-color: #2a4464;
+  color: white;
+  align-self: center;
+}
