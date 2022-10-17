@@ -3,7 +3,7 @@ var isCool = true;
 var totalPets = 0;
 
 console.log('value of Full Name:', fullName);
-console.log('value of isCool: isCool');
+console.log('value of isCool:', isCool);
 console.log('value of totalPets:', totalPets);
 
 console.log('typeof fullName:', typeof fullName);
