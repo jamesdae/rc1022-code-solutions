@@ -1,0 +1,36 @@
+* {
+  background-color: #f7f8fa;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Barlow, sans-serif;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  line-height: 2em;
+}
+
+.columnfourth {
+  display: flex;
+  flex-basis: calc(100% / 4);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+.box {
+  width: 30%;
+}
+
+@font-face {
+  font-family: Barlow, sans-serif;
+}
