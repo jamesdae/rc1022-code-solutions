@@ -11,17 +11,17 @@
 
 .row {
   display: flex;
+  gap: 2em;
 }
 
 .columnfifth {
   display: flex;
   flex-basis: calc(100% / 5);
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 img {
-  width: 90%;
+  width: 100%;
 }
 
 @font-face {
@@ -52,7 +52,10 @@ span.retail {
   font-size: smaller;
 }
 
-div.lv img {
-  height: 100%;
-  width: 100%;
+#lv {
+  justify-content: space-between;
+}
+
+.lv img {
+  height: 110%;
 }
