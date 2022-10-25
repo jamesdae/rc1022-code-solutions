@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+button.bulb {
+  height: 300px;
+  width: 300px;
+  border: none;
+  border-radius: 50%;
+}
+
+.off {
+  background-color: #242223;
+}
+
+.off > button {
+  background-color: #343434;
+}
+
+.on {
+  background-color: #fef9f1;
+}
+
+.on > button {
+  background-color: #faea84;
+  box-shadow: 0 0 100px #fef3c5;
+}
