@@ -27,9 +27,11 @@ button.bulb {
 
 .on {
   background-color: #fef9f1;
+  transition: 0.3s ease;
 }
 
 .on > button {
   background-color: #faea84;
   box-shadow: 0 0 100px #fef3c5;
+  transition: 0.3s ease;
 }
