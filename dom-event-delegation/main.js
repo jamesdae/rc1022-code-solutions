@@ -5,5 +5,6 @@ $click.addEventListener('click', function (event) {
   if (event.target.matches('button')) {
     var close = event.target.closest('.task-list-item');
     console.log('closest .task-list-item', close);
+    close.remove();
   }
 });
