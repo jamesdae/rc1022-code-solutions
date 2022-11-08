@@ -1,0 +1,28 @@
+.sentence {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+body {
+  height: 90vh;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+.next {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
