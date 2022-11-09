@@ -11,7 +11,7 @@ document.addEventListener('keydown', function (event) {
   if ($next.innerText !== event.key) {
     $next.classList.add('wrong');
   } else if ($next.nextElementSibling.classList.contains('hidden') && $next.innerText === event.key) {
-    $next.nextElementSibling.classList.replace('hidden', 'correct');
+    $next.nextElementSibling.classList.remove('hidden');
     for (var i = 0; i < $pan.length; i++) {
       $pan[i].setAttribute('class', 'hidden');
     }
@@ -24,3 +24,18 @@ document.addEventListener('keydown', function (event) {
     $next.classList.replace('next', 'correct');
   }
 });
+
+var $cancelButton = document.querySelector('.cancel');
+$cancelButton.addEventListener('click', function (event) {
+  $modal.classList.add('hidden');
+  for (var i = 0; i < $pan.length; i++) {
+    $pan[i].classList.replace('hidden', 'correct');
+  }
+});
+
+var $confirmButton = document.querySelector('.confirm');
+$confirmButton.addEventListener('click', function (event) {
+  location.reload();
+});
+
+var $modal = document.querySelector('.modal');

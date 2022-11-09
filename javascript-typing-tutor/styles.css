@@ -24,5 +24,70 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(50 50 50 / 80%);
+}
+
+.popup {
+  align-items: center;
+  justify-content: space-around;
+  height: 125px;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bolder;
+  max-width: 90%;
+}
+
+.modalbutton {
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  border-style: none;
+}
+
+.cancel {
+  background-color: red;
+  color: white;
+}
+
+.confirm {
+  background-color: green;
+  color: white;
+}
+
+.cancelp {
+  text-align: center;
+  margin: 15px 0 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-full,
+.column-half {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .column-full,
+  .column-half {
+    padding: 0 0.75rem;
+  }
+
+  .column-half {
+    width: 50%;
+  }
 }
