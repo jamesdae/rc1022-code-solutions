@@ -17,5 +17,5 @@ switch (process.argv[3]) {
     console.log('result:', multiply(Number(process.argv[2]), Number(process.argv[4])));
     break;
   default:
-    break;
+    console.log('invalid operation');
 }
