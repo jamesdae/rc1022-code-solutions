@@ -22,13 +22,12 @@ const grades = {
   }
 };
 
-app.use('/api/grades', function (req, res, next) {
+app.get('/api/grades', function (req, res) {
   const newArray = [];
   for (const ids in grades) {
     newArray.push(grades[ids]);
   }
-  res.send(res.json(newArray));
-  next();
+  res.status(200).json(newArray);
 });
 
 app.listen(3000);
