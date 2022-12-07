@@ -14,18 +14,19 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.get('/api/notes/:id', (req, res) => {
+  const id = Number(req.params.id);
   const noneError = {
-    error: `no note with id ${req.params.id}`
+    error: `no note with id ${id}`
   };
   const intError = {
     error: 'id must be a positive integer'
   };
-  if (!data.notes[req.params.id] && req.params.id > 0) {
+  if (!data.notes[id] && id > 0 && Number.isInteger(id)) {
     res.status(404).json(noneError);
-  } else if (!data.notes[req.params.id]) {
+  } else if (!data.notes[id]) {
     res.status(400).json(intError);
   } else {
-    res.status(200).json(data.notes[req.params.id]);
+    res.status(200).json(data.notes[id]);
   }
 });
 
@@ -43,7 +44,8 @@ app.post('/api/notes', (req, res) => {
     newObj.id = data.nextId;
     data.notes[data.nextId] = newObj;
     data.nextId++;
-    fs.writeFile('data.json', JSON.stringify(data), 'utf-8', err => {
+    const jsonData = JSON.stringify(data, null, 2);
+    fs.writeFile('data.json', jsonData, 'utf-8', err => {
       if (err) {
         console.error(err);
         res.status(500).json(unexpectedError);
@@ -55,22 +57,24 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
+  const id = Number(req.params.id);
   const error400 = {
     error: 'id must be a positive integer'
   };
   const error404 = {
-    error: `cannot find note with id ${req.params.id}`
+    error: `cannot find note with id ${id}`
   };
   const error500 = {
     error: 'An unexpected error occured'
   };
-  if (req.params.id > 0 && !data.notes[req.params.id]) {
+  if (id > 0 && !data.notes[id] && Number.isInteger(id)) {
     res.status(404).json(error404);
-  } else if (!data.notes[req.params.id]) {
+  } else if (!data.notes[id]) {
     res.status(400).json(error400);
   } else {
-    delete data.notes[req.params.id];
-    fs.writeFile('data.json', JSON.stringify(data), 'utf-8', err => {
+    delete data.notes[id];
+    const jsonData = JSON.stringify(data, null, 2);
+    fs.writeFile('data.json', jsonData, 'utf-8', err => {
       if (err) {
         console.error(err);
         res.status(500).json(error500);
@@ -82,11 +86,12 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 app.put('/api/notes/:id', (req, res) => {
+  const id = Number(req.params.id);
   const error400 = {
     error: 'id must be a positive integer'
   };
   const error404 = {
-    error: `cannot find note with id ${req.params.id}`
+    error: `cannot find note with id ${id}`
   };
   const error500 = {
     error: 'An unexpected error occured'
@@ -94,8 +99,8 @@ app.put('/api/notes/:id', (req, res) => {
   const contentError = {
     error: 'content is a required field'
   };
-  if (!data.notes[req.params.id]) {
-    if (req.params.id > 0) {
+  if (!data.notes[id]) {
+    if (id > 0) {
       res.status(404).json(error404);
     } else {
       res.status(400).json(error400);
@@ -103,14 +108,14 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (req.body.content === undefined) {
     res.status(400).json(contentError);
   } else {
-    data.notes[req.params.id] = req.body;
-    data.notes[req.params.id].id = Number(req.params.id);
+    data.notes[id] = req.body;
+    data.notes[id].id = id;
     fs.writeFile('data.json', JSON.stringify(data), 'utf-8', err => {
       if (err) {
         console.error(err);
         res.status(500).json(error500);
       } else {
-        res.status(200).json(data.notes[req.params.id]);
+        res.status(200).json(data.notes[id]);
       }
     });
   }

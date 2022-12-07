@@ -1,1 +1,25 @@
-{"nextId":16,"notes":{"2":{"id":2,"content":"The event loop, this, closures, and prototypal inheritance are special about JavaScript."},"5":{"id":5,"content":"In JavaScript, the value of `this` is determined when a function is called; not when it is defined."},"6":{"content":"This has been edited","id":6},"15":{"content":"Inertia is a property of matter","id":15}}}
+{
+  "nextId": 18,
+  "notes": {
+    "2": {
+      "id": 2,
+      "content": "The event loop, this, closures, and prototypal inheritance are special about JavaScript."
+    },
+    "5": {
+      "id": 5,
+      "content": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined."
+    },
+    "6": {
+      "content": "This has been edited",
+      "id": 6
+    },
+    "15": {
+      "content": "matter.inertia",
+      "id": 15
+    },
+    "17": {
+      "content": "Testing JSON formatting",
+      "id": 17
+    }
+  }
+}
