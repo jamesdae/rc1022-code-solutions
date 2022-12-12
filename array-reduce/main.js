@@ -25,14 +25,14 @@ console.log('sum of all numbers:', sum);
 const product = numbers.reduce((x, y) => x * y);
 console.log('product of all numbers:', product);
 
-const deposits = account.filter(transaction => transaction.type === 'deposit');
-const nums1 = deposits.map(transaction => transaction.amount);
-const balance1 = nums1.reduce(addup);
-const withdrawals = account.filter(transaction => transaction.type === 'withdrawal');
-const nums2 = withdrawals.map(transaction => transaction.amount);
-const balance2 = nums2.reduce(addup);
-const total = balance1 - balance2;
-console.log('total balance:', total);
+const balance = account.reduce((x, y) => {
+  if (y.type === 'deposit') {
+    x += y.amount;
+  } else {
+    x -= y.amount;
+  } return x;
+}, 0);
+console.log('total balance:', balance);
 
 const composite = traits.reduce((initial, current) => Object.assign(initial, current));
 console.log('value of composite:', composite);
