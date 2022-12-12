@@ -1,0 +1,24 @@
+{
+  "env": {
+    "node": false,
+    "browser": true,
+    "mocha": true
+  },
+  "globals": {
+    "chai": "readonly"
+  },
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "overrides": [
+    {
+      "files": [
+        "example-class.js"
+      ],
+      "rules": {
+        "no-proto": "off",
+        "no-console": "off"
+      }
+    }
+  ]
+}
