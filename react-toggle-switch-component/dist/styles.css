@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.switch {
+  width: 60px;
+  height: 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.check {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  width: 60px;
+  height: 22px;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+}
+
+.check:checked + .slider::before {
+  transform: translateX(38px);
+}
+
+.check:checked + .slider {
+  background-color: green;
+}
+
+.flex {
+  display: flex;
+}
+
+.centereditems {
+  align-items: center;
+}
