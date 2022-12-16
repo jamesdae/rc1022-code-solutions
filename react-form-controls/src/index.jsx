@@ -28,7 +28,7 @@ class RegistrationForm extends React.Component {
 
   render() {
     return (
-      <form action="">
+      <form onSubmit={this.handleSubmit}>
         <label>
           Username
           <input value={this.state.username} onChange={this.handleUsernameChange} type="text" />
@@ -37,7 +37,7 @@ class RegistrationForm extends React.Component {
           Password
           <input value={this.state.password} onChange={this.handlePasswordChange} type="password" />
         </label>
-        <button onClick={this.handleSubmit}>Sign Up</button>
+        <button>Sign Up</button>
       </form>
     );
   }
