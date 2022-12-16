@@ -1,0 +1,25 @@
+.column {
+  flex-direction: column;
+}
+
+.red {
+  color: red;
+}
+
+.fa-check {
+  color: green;
+}
+
+.input {
+  width: 10rem;
+}
+
+.flex {
+  display: flex;
+  gap: 5px;
+}
+
+.centered {
+  position: relative;
+  top: 25px;
+}
