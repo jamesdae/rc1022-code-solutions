@@ -1,0 +1,11 @@
+.header,
+.par {
+  border: 2px solid black;
+  width: 410px;
+  margin: 1px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
