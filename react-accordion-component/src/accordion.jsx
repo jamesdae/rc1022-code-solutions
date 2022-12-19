@@ -4,14 +4,14 @@ function EachTopic({ name, description, isOpen, onShow }) {
   if (isOpen) {
     return (
       <div className='column'>
-        <h1 className='header' onClick={onShow}>{name}</h1>
+        <h1 className='grey header' onClick={onShow}>{name}</h1>
         <p className='par'>{description}</p>
       </div>
     );
   } else {
     return (
       <div className='column'>
-        <h1 className='header' onClick={onShow}>{name}</h1>
+        <h1 className='grey header' onClick={onShow}>{name}</h1>
       </div>
     );
   }
