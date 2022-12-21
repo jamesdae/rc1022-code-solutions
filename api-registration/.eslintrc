@@ -1,0 +1,12 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "hash-password.js"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
