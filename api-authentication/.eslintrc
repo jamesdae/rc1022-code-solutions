@@ -1,0 +1,13 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "create-token.js",
+        "verify-password.js"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
