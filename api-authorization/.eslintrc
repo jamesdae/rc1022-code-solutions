@@ -1,0 +1,12 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "verify-token.js"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
