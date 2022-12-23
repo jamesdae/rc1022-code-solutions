@@ -1,0 +1,31 @@
+User can sign up:
+* When App is first rendered, the route property of state is set to the current window's hash route, which is then passed down to the renderPage function to determine whether the user is authorized to see the Home page,
+  or needs to use the AuthForm to sign in or sign up. Default is to show user AuthForm with sign in hash route.
+* User can either press a Register Now link that is rendered by the AuthForm component because the current hash route is for sign-in,
+  or they can press a Sign Up link in rendered by the Navbar component, and both options would result in the hash route changing to sign-up.
+* Everytime the App is mounted, the information in its state is passed into the AppContext.Provider component as an object named contextValue.
+* When the AuthPage is rendered, the route path of 'sign-up' causes a welcomeMessage of "Create an account to get started" above the AuthForm.
+ * AuthPage also deconstructs the user property, the route property, and the handleSignIn method from the context object which is accessible because AuthPage's contextType property is set to the AppContext context object.
+* AuthPage component then renders the AuthForm component and also passes it the route path and handleSignIn method from the context object.
+* When AuthForm is rendered, it's initial state has username and password properties with values set to empty strings.
+  * These values in state are changed simultaneously as the user types into the username input or the password input, by using the handleChange method that is called every time the onChange event is fired on either input.
+* When the form is submitted, handleSubmit method of AuthForm uses fetch with option set to post method to send newly registered user to sign in page, where they can input their created credentials.
+
+User can sign in:
+* If form is submitted with an authorized user's credentials, handleSubmit method of AuthForm uses fetch with post option to call the prop's onSignIn method with one argument, result.
+* onSignIn is part of props passed from AuthPage component, which then calls the handleSignIn method that was originally from the AppContext.Provider which was set up inside the overall App component.
+* handleSignIn method of App object calls one argument, result, which was passed from the authorized sign in attempt containing the user information and token.
+  * handleSignIn deconstructs the user object and token from argument result, and stores the token into the window's localStorage using setItem(), with key 'react-context-jwt',
+    and also sets user state to value of user object.
+* Because state was set, the App is re-rendered, and when Auth component renders, it also checks if there was a user value existing inside User state, which was passed here through the AppContext object.
+  * Since a user value exists, the Redirect component changes the hash route to #, which then gets parsed to an empty string inside App's componentDidMount function, which then causes the renderPage method of the App object to
+    render a Home page when the PageContainer component is caled on inside App's final render method.
+
+User can stay signed in:
+* Once a user signs in successfully, their token is stored in localStorage, and the App's user state is set with the user's userid and username.
+* Whenever the App component is mounted, it checks if there is a token stored in localstorage, and if there is, it is used to obtain the user payload using jwtDecode, otherwise it returns a null value for user state.
+* Everytime the App is mounted while a user is signed in, the state is set with the existing information, which results in the user ending up on the home page when the url is visited or refreshed.
+
+User can sign out:
+* If a user clicks the link for Sign Out, the handleSignOut metho dof the App object is called, and any value with the key of 'react-context-jwt' is removed from localStorage. This way, whenever App mounts again, the compodentDidMount function
+  set's the user state to null since there is no token value in localstorage. A user state with the value of null will trigger the default sign in view.
