@@ -1,0 +1,14 @@
+{
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "env": {
+    "node": false
+  },
+  "rules": {
+    "no-multi-spaces": [
+      "error",
+      { "ignoreEOLComments": true }
+    ]
+  }
+}
