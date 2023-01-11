@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.5">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data Structures - Linked Lists</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/6.2.0/mocha.min.css">
+  <style>
+    #mocha h1 {
+      font-size: 1.5rem;
+    }
+
+    #mocha h2 {
+      font-size: 1rem;
+    }
+
+    #mocha-stats,
+    #mocha .test pre {
+      font-size: 1rem;
+    }
+
+    #page-title {
+      font-size: 2rem !important;
+    }
+
+    body,
+    #mocha {
+      font-family: monospace;
+    }
+
+    .test.pass::before,
+    .test.fail::before,
+    .test.pending::before {
+      font-size: 18px !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="mocha">
+    <h1>Data Structures - Linked Lists</h1>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/6.2.0/mocha.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.js"></script>
+  <script>
+    /* exported expect */
+    const expect = chai.expect;
+    mocha.setup('bdd');
+  </script>
+  <script src="lib/linked-list.js"></script>
+  <script src="get-head.js"></script>
+  <script src="get-head.test.js"></script>
+  <script src="update-head.js"></script>
+  <script src="update-head.test.js"></script>
+  <script src="prepend.js"></script>
+  <script src="prepend.test.js"></script>
+  <script src="without-head.js"></script>
+  <script src="without-head.test.js"></script>
+  <script src="update-next.js"></script>
+  <script src="update-next.test.js"></script>
+  <script src="insert-next.js"></script>
+  <script src="insert-next.test.js"></script>
+  <script src="remove-next.js"></script>
+  <script src="remove-next.test.js"></script>
+  <script src="swap-front.js"></script>
+  <script src="swap-front.test.js"></script>
+  <script src="get-length.js"></script>
+  <script src="get-length.test.js"></script>
+  <script src="get-tail.js"></script>
+  <script src="get-tail.test.js"></script>
+  <script src="append.js"></script>
+  <script src="append.test.js"></script>
+  <script src="remove-tail.js"></script>
+  <script src="remove-tail.test.js"></script>
+  <script src="includes.js"></script>
+  <script src="includes.test.js"></script>
+  <script>
+    mocha.run();
+  </script>
+</body>
+</html>
