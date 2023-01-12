@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Sizer</title>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <a href="#" id="size-12">12</a>
+  <a href="#" id="size-20">20</a>
+  <a href="#" id="size-32">32</a>
+  <script>
+    function makeSizer(size) {
+      return () => {
+        document.body.style.fontSize = size + 'px';
+      };
+    }
+    document
+      .querySelector('#size-12')
+      .addEventListener('click', makeSizer(12));
+    document
+      .querySelector('#size-20')
+      .addEventListener('click', makeSizer(20));
+    document
+      .querySelector('#size-32')
+      .addEventListener('click', makeSizer(32));
+  </script>
+</body>
+</html>
